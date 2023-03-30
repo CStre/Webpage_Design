@@ -1,0 +1,121 @@
+/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #264D73;
+  font-size: 2.5rem;
+  flex-direction: row;
+}
+
+h2,
+h3 {
+  color: #444;
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+body {
+  padding: .5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+@media (min-width: 600px) {
+  body {
+    padding: 2rem;
+  }
+}
+
+body,
+input[text] {
+  color: #333;
+  font-family: Cambria, Georgia, serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: #3d3d3d;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+nav a.active {
+  background-color: black;
+  color: white;
+}
+
+hr {
+  margin: 1.5rem 0;
+}
+
+input[type="text"] {
+  border: 0;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.form-control {
+  border: 0;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 7.5px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}

@@ -1,0 +1,21 @@
+#welcome {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+}
+
+#instructions {
+    text-decoration: none;
+    border-color: blueviolet;
+    border-style:solid;
+    border-width: 2px;
+    padding: 10px;
+    color: black;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

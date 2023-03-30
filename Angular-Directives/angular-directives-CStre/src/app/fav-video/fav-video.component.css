@@ -1,0 +1,23 @@
+#video {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#video_input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header {
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    color: royalblue;
+    font-weight: 600;
+}
+
+

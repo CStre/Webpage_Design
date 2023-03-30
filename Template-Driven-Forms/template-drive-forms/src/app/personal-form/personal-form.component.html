@@ -1,0 +1,292 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Housing Selection(2023-24)</h1>
+    <h2>Please place your information below and select your space.</h2>
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+
+
+      <div class="form-group">
+        <label for="name">Name: </label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          Your Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="banner">Banner ID: </label>
+        <input type="text" class="form-control" id="banner" required [(ngModel)]="model.banner" name="banner"
+          #name="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Student Email: </label>
+        <input type="text" class="form-control" id="email" required [(ngModel)]="model.email" name="email"
+          #name="ngModel">
+      </div>
+
+
+      <div class="form-group">
+        <label for="pronoun">Pronouns: </label>
+        <select class="form-control" id="pronoun" required [(ngModel)]="model.pronoun" name="pronoun" #pronoun="ngModel"
+          (change)="showAdditionalSection1()">
+          <option *ngFor="let pow of pronouns" [value]="pow">{{pow}}</option>
+        </select>
+        <div [hidden]="pronoun.valid || pronoun.pristine" class="alert alert-danger">
+          Your pronouns are required
+        </div>
+      </div>
+
+      <div *ngIf="model.pronoun === 'Other'">
+        <div class="form-group">
+          <label for="other">Please enter your pronouns: </label>
+          <input type="text" class="form-control" id="other" required [(ngModel)]="model.other" name="other"
+            #pronoun="ngModel">
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="resident">Do you wish to live on-campus? </label>
+        <select class="form-control" id="resident" required [(ngModel)]="model.resident" name="resident"
+          #resident="ngModel" (change)="showAdditionalSection2()">
+          <option *ngFor="let live of residents" [value]="live">{{live}}</option>
+        </select>
+        <div [hidden]="resident.valid || resident.pristine" class="alert alert-danger">
+          Your response is required
+        </div>
+      </div>
+
+      <div *ngIf="model.resident === 'Yes'">
+        <div class="form-group">
+          <label for="hall">Select your residence hall: </label>
+          <select class="form-control" id="hall" required [(ngModel)]="model.hall" name="hall" #hall="ngModel">
+            <option *ngFor="let hall of halls" [value]="hall">{{hall}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Appalachian Heights'">
+        <div class="form-group">
+          <label for="app">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="app" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_app.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Mountain Laurel Hall'">
+        <div class="form-group">
+          <label for="mlh">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="mlh" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_trans.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Living Learning Center (LLC)'">
+        <div class="form-group">
+          <label for="llc">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="llc" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_llc.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Belk Hall'">
+        <div class="form-group">
+          <label for="belk">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="belk" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_belk.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Cannon Hall'">
+        <div class="form-group">
+          <label for="cannon">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="cannon" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_cannon.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Cone Hall'">
+        <div class="form-group">
+          <label for="cone">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="cone" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_cone.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Dogwood Hall'">
+        <div class="form-group">
+          <label for="dogwood">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="dogwood" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_dog.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Doughton Hall'">
+        <div class="form-group">
+          <label for="dough">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="dough" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_dough.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Elkstone Hall'">
+        <div class="form-group">
+          <label for="elk">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="elk" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_elk.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Frank Hall'">
+        <div class="form-group">
+          <label for="frank">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="frank" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_frank.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Laurel Creek Hall'">
+        <div class="form-group">
+          <label for="laurel">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="laurel" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_laurel.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Mountaineer Hall'">
+        <div class="form-group">
+          <label for="mount">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="mount" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_mount.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Newland Hall'">
+        <div class="form-group">
+          <label for="newland">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="newland" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_newland.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'New River Hall'">
+        <div class="form-group">
+          <label for="river">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="river" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_newriver.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Raven Rocks'">
+        <div class="form-group">
+          <label for="raven">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="raven" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_raven.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Sleep Inn'">
+        <div class="form-group">
+          <label for="sleep">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="sleep" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_sleep.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Summit Hall'">
+        <div class="form-group">
+          <label for="summit">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="summit" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_summit.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'Thunder Hill'">
+        <div class="form-group">
+          <label for="thunder">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="thunder" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_thunder.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div *ngIf="model.hall === 'White Hall'">
+        <div class="form-group">
+          <label for="white">Select your residence hall room from a list of available spaces: </label>
+          <select class="form-control" id="white" required [(ngModel)]="model.room" name="room" #room="ngModel">
+            <option *ngFor="let room of rooms_white.sort()" [value]="room">{{room}}</option>
+          </select>
+        </div>
+      </div>
+
+
+
+      <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit Form</button>
+      &nbsp;&nbsp;
+      <button type="button" class="btn btn-default" (click)="newSubmission(); heroForm.reset()">Clear</button>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h1>Thank you for your submission.</h1>
+    <h2>Here is a summary and what to expect for next year:</h2>
+    <div class="row">
+      <div class="col-xs-3">Name: </div>
+      <div class="col-xs-9">{{ model.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Banner ID: </div>
+      <div class="col-xs-9">{{ model.banner }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Email: </div>
+      <div class="col-xs-9">{{ model.email }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Pronouns: </div>
+      <div class="col-xs-9">{{ model.pronoun }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">On-campus: </div>
+      <div class="col-xs-9">{{ model.resident }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Residence: </div>
+      <div class="col-xs-9">{{ model.hall }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Room: </div>
+      <div class="col-xs-9">{{ model.room }}</div>
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary" (click)="submitted=false">Edit Submission</button>
+  </div>
+</div>
+
+<style>
+  .no-style .ng-valid {
+    border-left: 1px solid #CCC
+  }
+
+  .no-style .ng-invalid {
+    border-left: 1px solid #CCC
+  }
+</style>

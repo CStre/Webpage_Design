@@ -1,0 +1,47 @@
+<section id="riddle">
+  <div class="question">
+    <h3>I am not a language that you can learn,
+      But I am what makes your computer turn. </h3>
+    <h3>I consist of symbols and keys,
+      Without me, your device would seize.</h3>
+    <h3>I'm made up of 1s and 0s,
+      I run the show, that's just how it goes.</h3>
+    <h3>So tell me, what am I called?
+      The answer is simple, if you're not stalled.</h3>
+    <h3>The solution is easy, it's not obscene,
+      I'm the backbone of the digital world.</h3>
+    <h3>Can you guess my name, have you unfurled?</h3>
+  </div>
+</section>
+
+
+
+
+<section id="wrapper">
+  <div class="symbol">
+    <h3 (click)="rotate(0)">{{ myArray[currWords[0]] }}</h3>
+  </div>
+  <div class="symbol">
+    <h3 (click)="rotate(1)">{{ myArray[currWords[1]] }}</h3>
+  </div>
+  <div class="symbol">
+    <h3 (click)="rotate(2)">{{ myArray[currWords[2]] }}</h3>
+  </div>
+  <div class="symbol">
+    <h3 (click)="rotate(3)">{{ myArray[currWords[3]] }}</h3>
+  </div>
+  <div class="symbol">
+    <h3 (click)="rotate(4)">{{ myArray[currWords[4]] }}</h3>
+  </div>
+  <div class="symbol">
+    <h3 (click)="rotate(5)">{{ myArray[currWords[5]] }}</h3>
+  </div>
+</section>
+
+
+
+<section id="riddle">
+  <div class="question" *ngIf="compare()">
+    <h3>Correct! It was CODING.</h3>
+  </div>
+</section>

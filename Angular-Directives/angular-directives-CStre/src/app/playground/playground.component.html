@@ -1,0 +1,10 @@
+<section id="image">
+    <button class = 'button1' id="open-map-btn" (click)="openMap()" *ngIf="!mapOpen">
+      Open the Map
+    </button>
+    <button class = 'button1' id="close-map-btn" (click)="closeMap()" *ngIf="mapOpen">
+      Close the Map
+    </button>
+    <img *ngIf="mapOpen" src="https://cas.appstate.edu/sites/default/files/interactive-map.png" alt="campus pdf" style="width:950px;height:625px;">
+  </section>
+

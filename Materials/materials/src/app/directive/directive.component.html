@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directive Component Assignment</title>
+</head>
+
+<body>
+  <h2 class="hh">Welcome to my Assigment</h2>
+
+  <div class = "center2">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2 class="h">About Me</h2>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <h1 class="h">Hello! To the internet!</h1>
+      <p class="a">This will forever go down in history as my first webpage.</p>
+      <p class="b">Make some room internet! I'm taking over!!</p>
+
+      <div class="row">
+        <div class="column" style="background-color: #aaa;">
+
+          <h2 class="h">About Me</h2>
+          <p class="c"> </p>
+          <ul class="a">
+            <li>I am from Charlotte, North Carolina.
+              More specifically a smaller town named Matthews!</li>
+
+            <li>I am currently a Junior with a little over 100 credits
+              and set to graduate in May 2024.</li>
+
+            <li>My major is in computer science and I am minoring in
+              Computer Information Systems!</li>
+
+            <li>I like to be challenged in class and flourish when I
+              get into a rythmn with my schedule.</li>
+
+            <li>I am a very adventurous person and love to travel and
+              be in the outdoors!</li>
+
+            <li>I have a smart vaccum named Albus and I occasionally
+              come back to my room and see it cleaning my carpet.</li>
+
+            <li>I am somone who will always love massive pillows and
+              will forever have a thousand on my bed</li>
+
+            <li>I am an Eagle Scout and no, I do not know how to tie
+              knots so don't ask me :)</li>
+
+            <li>I LOVE corgis. I LOVE LOVE LOOOOVE them. The doggos
+              are very cute and I want 10.</li>
+
+            <li>I am a very emotionally led person and has a creative
+              way of thinking.</li>
+
+            <li>I am somone who craves new expiriences and different types
+              of people in my life, hates routine. </li>
+
+            <li>My dream job is to work for Apple in some capacity and my
+              only requirement is to work a creative driven job.</li>
+
+            <li>I am really excitied to learn how to make websites this semester.
+              I find it to be really satisfying.</li>
+
+          </ul>
+
+        </div>
+        <div class="column" style="background-color: #bbb;">
+          <h2 class="h">My College Expiriences</h2>
+          <img
+            src="https://s3.amazonaws.com/handshake.production/app/public/assets/students/24724958/profile/data.?1653457156"
+            alt="Profile Photo" class="center" border-radius="50%" padding = 5px width = 200px>
+          <p class="c"> </p>
+          <ul class="a">
+            <li>Studied business leadership strategies in a project management course where I got the
+              opportunity to explore the modern techniques used in fields today by executives to determine best
+              business strategies.</li>
+
+            <li>Developed statistical analytical programming skills using R in R Studio and was introduced to the
+              concepts and strategies used in the fields of data science and data analytics.</li>
+
+            <li>Proficient knowledge programming in languages such as JavaScript, C, C++, Python, and Swift
+              and experienced using virtual machines such as Vim Editor, Eclipse, and BlueJ.</li>
+          </ul>
+
+          <h2 class="h">An embarrassing video of me</h2>
+          <a href="https://www.youtube.com/watch?v=MYTKYckIgqE">Youtube</a>
+          <p class="b">Please don't be concerned!</p>
+        </div>
+      </div>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+  <br>
+
+  <div class = "center2">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2 class="h">Favorite Video</h2>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <section id="video">
+        <div class="header">
+          <h2 class="h">Cool video you should watch... again!</h2>
+        </div>
+      </section>
+
+      <section id="video_input">
+        <iframe width="940" height="529" src="https://www.youtube.com/embed/NkBXgcN3fXo"
+          title="The Surprisingly Complex Music of Wii Play&#39;s Tanks!" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </section>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+  </div>
+  <br>
+
+  <div class = "center2">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            <h2 class="h">Best Song Ever</h2>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <section id="video">
+        <div class="header">
+            <h2 class="h">I highly suggest listening to this!</h2>
+        </div>
+      </section>
+
+      <section id="video_input">
+        <iframe width="701" height="394" src="https://www.youtube.com/embed/fyxq39JN_sE"
+          title="Anna Lapwood - Cornfield Chase (From &quot;Interstellar&quot;)" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </section>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+  </div>
+  <br>
+
+  <div class = "center2">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2 class="h">Something Beautiful</h2>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <img class = "two"
+        src="https://media.licdn.com/dms/image/C5616AQEkebTg10fZRg/profile-displaybackgroundimage-shrink_350_1400/0/1655662219617?e=1683763200&v=beta&t=jK0HJ_ypgPv-FgBAxK_ygnzK53hWiiBeQ0NzqM-mA2c"
+        alt="Profile Photo" class="center">
+
+
+    </mat-expansion-panel>
+  </mat-accordion>
+  </div>
+  <br>
+
+  <div class = "center2">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2 class="h">About Me!</h2>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <section id="about">
+        <div class="header">
+          <h2 class="h">Action Statement</h2>
+        </div>
+      </section>
+
+      <section id="about_text">
+        <div class="body">
+          <p>Tbh, idk what an action statement is buuuuuuut I have this!</p>
+        </div>
+      </section>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+

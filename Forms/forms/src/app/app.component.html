@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> your title </title>
+  <style>
+    .title {
+      text-align: center;
+      font-size: xx-large;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgb(63, 35, 63);
+      font-weight: 500;
+    }
+
+    .fill {
+      text-align: center;
+      font-size: medium;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgb(63, 35, 63);
+    }
+  </style>
+</head>
+
+<body>
+  <div class=title>
+    Answer these simple questions: <br><br>
+  </div>
+
+  <div class=fill>
+    <form action="./submitForm.php">
+      <label for="Username">User Name: </label> &nbsp;&nbsp;&nbsp;
+      <input type="text" name="username" id="username"><br><br>
+
+      <label for="Password">Password: </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="password" id="password"><br><br>
+
+      <label for="Email">Email: </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="email" id="email"><br><br>
+
+      <label for="Date of Birth">DOB:
+      </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="email" id="email"><br><br>
+
+
+      <b>What country is NOT classified as a microstate in Europe?</b> <br><br>
+      <input type="radio" id="andorra" name="fav_language" value="Andorra">
+      <label for="html">Andorra &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+
+      <input type="radio" id="lich" name="fav_language" value="Liechtenstein">
+      <label for="css">Liechtenstein</label><br>
+
+      <input type="radio" id="slovakia" name="fav_language" value="Slovakia">
+      <label for="javascript">Slovakia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+
+      <input type="radio" id="malta" name="fav_language" value="Malta">
+      <label for="javascript">Malta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+
+      <input type="radio" id="monaco" name="fav_language" value="Monaco">
+      <label for="css">Monaco&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+
+      <input type="radio" id="san marino" name="fav_language" value="San Marino">
+      <label for="javascript">San Marino&nbsp;&nbsp;&nbsp;</label><br>
+
+      <input type="radio" id="vatican city" name="fav_language" value="Vatican City">
+      <label for="css">Vatican City&nbsp;&nbsp;</label><br><br>
+
+      <button type="submit">Save</button>
+
+    </form>
+  </div>
+</body>
+
+</html>

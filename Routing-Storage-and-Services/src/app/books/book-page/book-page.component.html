@@ -1,0 +1,13 @@
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div style="text-align: center; padding: 20px; background-color: #f2f2f2; border-radius: 10px;">
+    <div *ngIf="book">
+      <h1>{{ book.title }}</h1>
+      <p>Author: {{ book.author }}</p>
+      <p>ISBN: {{ book.isbn }}</p>
+      <p>Description: {{ book.blurb }}</p>
+    </div>
+  </div>
+</div>
+
+
+
